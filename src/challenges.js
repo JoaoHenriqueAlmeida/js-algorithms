@@ -1,34 +1,26 @@
 // Desafio 1
 function compareTrue(value1, value2) {
-  let result = false;
-
-  if (value1 === true && value2 === true) {
-    result = true;
-  }
-  return result;
+  return value1 === true && value2 === true;
 }
 
 // Desafio 2
 function calcArea(base, height) {
-  let result = (base * height) / 2;
-  return result;
+  return (base * height) / 2;
 }
 
 // Desafio 3
 function splitSentence(String) {
-  let result = String.split(' ');
+  return String.split(' ');
   /* Método String split () utilizado para separar uma string em um array de strings, nesse caso, o programa pede que retorne cada palavra como um elemento separado do array.
   Método retirado de: https://www.w3schools.com/jsref/jsref_split.asp
 */
-  return result;
 }
 
 // Desafio 4
 function concatName(Array) {
   let last = Array[Array.length - 1];
   let first = Array[0];
-  let result = last + ', ' + first;
-  return result;
+  return last + ', ' + first;
 }
 
 // Desafio 5
@@ -91,11 +83,9 @@ function fizzBuzz(numberArray) {
 
 // Desafio 9
 function encode() {
-  
 }
 
 function decode() {
-  
 }
 
 module.exports = {
