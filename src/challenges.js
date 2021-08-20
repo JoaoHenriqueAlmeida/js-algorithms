@@ -18,9 +18,7 @@ function splitSentence(String) {
 
 // Desafio 4
 function concatName(Array) {
-  let last = Array[Array.length - 1];
-  let first = Array[0];
-  return last + ', ' + first;
+  return `${Array[Array.length - 1]}, ${Array[0]}`;
 }
 
 // Desafio 5
@@ -30,20 +28,8 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(numberArray) {
-  let counter = 0;
-  let highestNumber = numberArray[0];
-  for (let index1 = 0; index1 < numberArray.length; index1 += 1) {
-    let currentNumber = numberArray[index1];
-    if (currentNumber >= highestNumber) {
-      highestNumber = currentNumber;
-    }
-  }
-  for (let index2 = 0; index2 < numberArray.length; index2 += 1) {
-    if (highestNumber === numberArray[index2]) {
-      counter += 1;
-    }
-  }
-  return counter;
+  const highestArrayNumber = numberArray.reduce((acc, curr) => (curr > acc ? curr : acc));
+  return numberArray.filter((element) => element === highestArrayNumber).length;
 }
 
 // Desafio 7
@@ -63,22 +49,19 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(numberArray) {
-  let stringArray = [];
-  for (let index = 0; index < numberArray.length; index += 1) {
-    if (numberArray[index] % 3 === 0 && numberArray[index] % 5 === 0) {
-      stringArray.push('fizzBuzz');
+  return numberArray.map((element) => {
+    const fizzBuzzString = (element % 3 === 0 && element % 5 === 0);
+    const fizz = (element % 3 === 0);
+    const buzz = (element % 5 === 0);
+    if (fizzBuzzString) {
+      return 'fizzBuzz';
+    } if (fizz) {
+      return 'fizz';
+    } if (buzz) {
+      return 'buzz';
     }
-    if (numberArray[index] % 3 === 0 && numberArray[index] % 5 > 0) {
-      stringArray.push('fizz');
-    }
-    if (numberArray[index] % 5 === 0 && numberArray[index] % 3 > 0) {
-      stringArray.push('buzz');
-    }
-    if (numberArray[index] % 5 > 0 && numberArray[index] % 3 > 0) {
-      stringArray.push('bug!');
-    }
-  }
-  return stringArray;
+    return 'bug!';
+  });
 }
 
 // Desafio 9
