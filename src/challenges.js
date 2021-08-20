@@ -65,10 +65,24 @@ function fizzBuzz(numberArray) {
 }
 
 // Desafio 9
-function encode() {
+function encode(String) {
+  const newArray = String.split('');
+  const changeA = newArray.map((element) => (element === 'a' ? '1' : element));
+  const changeE = changeA.map((element) => (element === 'e' ? '2' : element));
+  const changeI = changeE.map((element) => (element === 'i' ? '3' : element));
+  const changeO = changeI.map((element) => (element === 'o' ? '4' : element));
+  const changeU = changeO.map((element) => (element === 'u' ? '5' : element));
+  return changeU.join('');
 }
 
-function decode() {
+function decode(String) {
+  const newArray = String.split('');
+  const changeA = newArray.map((element) => (element === '1' ? 'a' : element));
+  const changeE = changeA.map((element) => (element === '2' ? 'e' : element));
+  const changeI = changeE.map((element) => (element === '3' ? 'i' : element));
+  const changeO = changeI.map((element) => (element === '4' ? 'o' : element));
+  const changeU = changeO.map((element) => (element === '5' ? 'u' : element));
+  return changeU.join('');
 }
 
 module.exports = {
