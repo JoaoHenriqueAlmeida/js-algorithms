@@ -7,24 +7,16 @@ function techList(techArr, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber(numberArray) {
-  // const elementOcurrences = numberArray.reduce(function (acc, curr) {
-  //   const verification = acc[curr] ? acc[curr] + 1 : acc[curr] = 1;
-  //   return verification;
-  // }, {});
-  // const getInvalidOcurrences = Object.values(elementOcurrences).filter((element) => element > 3);
-
-  // if (getInvalidOcurrences.length > 0 || numberArray.map((number) => (number > 9 || number < 0))) {
-  //   return 'não é possível gerar um número de telefone com esses valores';
-  // }
-  // if (numberArray.length !== 11) {
-  //   return 'Array com tamanho incorreto.';
-  // }
+function generatePhoneNumber() {
+  // seu código aqui
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  const checkA = lineA < (lineB + lineC) && lineA > Math.abs(lineB - lineC);
+  const checkB = lineB < (lineA + lineC) && lineB > Math.abs(lineA - lineC);
+  const checkC = lineC < (lineA + lineB) && lineC > Math.abs(lineA - lineB);
+  return (checkA && checkB && checkC);
 }
 
 // Desafio 13
