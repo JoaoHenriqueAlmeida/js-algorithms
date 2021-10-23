@@ -20,9 +20,16 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  const numberArray = string.replace(/[^0-9]/g, '').toString().split('').map(
+    (number) => parseInt(number, 10),
+  );
+  const result = numberArray.reduce((acc, curr) => acc + curr);
+  if (result === 1) return `${result} copo de água`;
+  return `${result} copos de água`;
 }
+
+hydrate('1 algo, 2 outra coisa, 4 jacarés');
 
 module.exports = {
   generatePhoneNumber,
